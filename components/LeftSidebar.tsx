@@ -42,7 +42,7 @@ const NAVIGATION_ITEMS = [
 
 export const LeftSidebar = () => {
   return (
-    <section className='fixed w-[275px] flex flex-col items-stretch h-screen px-6'>
+    <section className='sticky top-0 w-[23%] flex flex-col items-stretch h-screen'>
       <div className='flex flex-col items-stretch h-full space-y-4 mt-4'>
         {NAVIGATION_ITEMS.map((item) => (
           <Link
@@ -56,7 +56,7 @@ export const LeftSidebar = () => {
             {item.title !== 'Twitter' && <div>{item.title}</div>}
           </Link>
         ))}
-        <button className='w-full rounded-full bg-primary px-6 py-4 text-2xl text-center hover:opacity-70 transition duration-200'>
+        <button className='rounded-full m-4 bg-primary px-6 py-4 text-2xl text-center hover:opacity-70 transition duration-200'>
           Tweet
         </button>
       </div>
